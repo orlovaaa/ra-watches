@@ -1,0 +1,184 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #cbbfbb;
+    color: #333;
+    font-family: sans-serif;
+    font-size: 16px;
+    height: 100vh;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main {
+    background-color: #e6e5e5;
+    border-radius: 10px;
+    min-height: 90px;
+    padding: 30px 20px 20px;
+    width: 350px;
+}
+
+.form {
+    width: 100%;
+}
+
+.form__box {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    gap: 2px;
+}
+
+.form__box-input {
+    width: 100%;
+    padding: 5px;
+    border-radius: 5px;
+    border: 0;
+    background-color: #f3f3f3;
+}
+
+.form__box-btn {
+    background-color: #61988e;
+    border-image: none;
+    border-radius: 5px;
+    border-style: none;
+    border-width: 0;
+    color: #fff;
+    cursor: pointer;
+    height: 40px;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    outline: none;
+    text-transform: uppercase;
+    width: 100%;
+}
+
+.form__box-btn:hover {
+    background-color: #436a63;
+}
+
+.watches {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.watches-item {
+    position: relative;
+}
+
+.watches-item__title {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 13px;
+}
+
+.watches-item__close {
+    width: 20px;
+    height: 3px;
+    background-color: #333;
+    display: inline-block;
+    transform: rotate(45deg);
+    position: absolute;
+    top: 5px;
+    right: -10%;
+    cursor: pointer;
+}
+
+.watches-item__close::before {
+    content: "";
+    width: 20px;
+    height: 3px;
+    background-color: #333;
+    display: inline-block;
+    transform: rotate(90deg); 
+    position: absolute;
+}
+
+.clock {
+    box-shadow: inset 0 0 0 0.02em #000;
+    display: inline-block;
+    border-radius: 0.5em;
+    position: relative;
+    font-size: 100px;
+    overflow: hidden;
+    height: 1em;
+    width: 1em;
+}
+.clock::after {
+    content: '';
+    background-color: #fff;
+    border-radius: 0.5em;
+    margin-left: -0.5em;
+    margin-top: -0.5em;
+    position: absolute;
+    font-size: 0.01em;
+    display: block;
+    height: 1em;
+    width: 1em;
+    left: 50%;
+    top: 50%;
+}
+.clock__hand-container, .clock__hand{
+    margin-left: -0.5em;
+    margin-top: -0.5em;
+    font-size: inherit;
+    position: absolute;
+    display: block;
+    height: 1em;
+    width: 1em;
+    left: 50%;
+    top: 50%;
+}
+
+.clock__hand--hour::after {
+    content: "";
+    border-radius: 0.015em 0.015em 0.01em 0.01em;
+    background-color: #000;
+    margin-bottom: -0.02em;
+    margin-left: -0.025em;
+    font-size: inherit;
+    position: absolute;
+    display: block;
+    height: 0.25em;
+    width: 0.05em;
+    bottom: 50%;
+    left: 50%;
+}
+.clock__hand--minute::after {
+    content: "";
+    border-radius: 0.012em 0.012em 0.01em 0.01em;
+    background-color: #000;
+    margin-bottom: -0.02em;
+    margin-left: -0.015em;
+    font-size: inherit;
+    position: absolute;
+    display: block;
+    height: 0.4em;
+    width: 0.03em;
+    bottom: 50%;
+    left: 50%;
+}
+.clock__hand--second::after {
+    content: "";
+    border-radius: 0.01em 0.01em 0.005em 0.005em;
+    background-color: #f00;
+    margin-bottom: -0.02em;
+    margin-left: -0.005em;
+    font-size: inherit;
+    position: absolute;
+    display: block;
+    height: 0.46em;
+    width: 0.01em;
+    bottom: 50%;
+    left: 50%;
+}
